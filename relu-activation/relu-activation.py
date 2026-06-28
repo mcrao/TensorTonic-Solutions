@@ -5,10 +5,4 @@ def relu(x):
     Implement ReLU activation function.
     """
     # Write code here
-    x = np.array(x)
-
-    return np.where(
-        x > 0,
-        x,
-        0
-    )
+    return np.maximum(0, x)
