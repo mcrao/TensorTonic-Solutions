@@ -5,10 +5,10 @@ def sigmoid(x):
     Vectorized sigmoid function.
     """
     # Write code here
-    np_x = np.array(x)
-    
+    x = np.array(x)
+
     return np.where(
-        np_x >= 0,
-        1 / (1 + np.exp(-np_x)),
-        np.exp(np_x) / (1 + np.exp(np_x))
+        x >= 0,
+        1/(1 + np.exp(-x)),
+        np.exp(x) / (1 + np.exp(x))
     )
