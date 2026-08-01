@@ -67,7 +67,11 @@ ReLU also has practical advantages:
 The derivative (used during backpropagation) is:
 
 $$
-\frac{d}{dx} \text{ReLU}(x) = \begin{cases} 1 & \text{if } x > 0 \\ 0 & \text{if } x < 0 \end{cases}
+\frac{d}{dx} \text{ReLU}(x) =
+\begin{cases}
+    1, & \text{if } x > 0 \\
+    0, & \text{if } x < 0
+\end{cases}
 $$
 
 At $x = 0$, the function has a sharp corner and is technically not differentiable. In practice, frameworks define the derivative at zero as 0 (some use 0.5 or 1). This does not cause problems in practice because hitting exactly $x = 0$ is extremely rare with floating-point numbers.
